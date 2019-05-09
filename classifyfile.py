@@ -19,8 +19,7 @@ def eachFile(filepath):
 
 
 if __name__ == "__main__":
-	search_dir = search_dir
 	sql_files, xml_files=[], []
-	sql_files, xml_files = eachFile(base_dir)
+	sql_files, xml_files = eachFile(filepath=search_dir)
 	print(sql_files)
 	print(xml_files)
