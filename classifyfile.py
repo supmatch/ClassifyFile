@@ -9,12 +9,12 @@ def eachFile(filepath):
         if os.path.isdir(fi_d):
             eachFile(fi_d)
         else:
-            child = os.path.join(fi_d)
-            arrs = child.split('.')[-1]
-            if arrs in sql_type:
-                sql_files.append(child)
-            if arrs in xml_type:
-                xml_files.append(child)
+            filename = os.path.join(fi_d)
+            suffixname = filename.split('.')[-1]
+            if suffixname in sql_type:
+                sql_files.append(filename)
+            if suffixname in xml_type:
+                xml_files.append(filename)
     return sql_files, xml_files
 
 
